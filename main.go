@@ -10,8 +10,8 @@ func main() {
 		_, _ = w.Write([]byte("Hello World"))
 	})
 
-	fmt.Println("server started at port 8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	fmt.Println("server started at port 80")
+	if err := http.ListenAndServe(":80", nil); err != nil {
 		panic(err)
 	}
 }
