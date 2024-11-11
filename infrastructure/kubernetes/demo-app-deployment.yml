@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: ghcr.io/path-to-image/demo-app
+          image: ghcr.io/solidshake/ci-cd-example/demo-app
           env:
             - name: GIN_MODE
               value: "release"
