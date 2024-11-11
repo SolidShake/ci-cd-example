@@ -55,7 +55,7 @@ jobs:
           platforms: linux/amd64
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}/demo-app:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository | toLower }}/demo-app:${{ github.sha }}
 
   deploy:
     needs: [build]
@@ -88,4 +88,4 @@ jobs:
             ./infrastructure/kubernetes/demo-app-deployment.yml
             ./infrastructure/kubernetes/demo-app-service.yml
             ./infrastructure/kubernetes/demo-app-ingress.yml
-          images: ghcr.io/${{ github.repository }}/demo-app:${{ github.sha }}
+          images: ghcr.io/${{ github.repository | toLower }}/demo-app:${{ github.sha }}
